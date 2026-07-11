@@ -27,4 +27,6 @@ public interface SubscriptionRepository extends JpaRepository<Subscription,Long>
 
     List<Subscription> findByUser(User user);            // GET /subscriptions
     boolean existsByUserAndAnime(User user, Anime anime); // anti-doppione
+    java.util.Optional<Subscription> findByUserAndAnime(User user, Anime anime);
+    void deleteByUserAndAnime(User user, Anime anime);   // unsubscribe
 }

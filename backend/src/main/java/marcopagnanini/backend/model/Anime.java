@@ -22,4 +22,7 @@ public class Anime {
     private Long nextAiringAt;   // epoch UTC — NON timeUntilAiring
 
     private Integer nextEpisode;
+
+    @Column(length = 512)
+    private String coverImage;   // URL poster AniList (coverImage.large)
 }
